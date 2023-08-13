@@ -1,0 +1,25 @@
+{
+  "name": "oficina-rest",
+  "version": "1.0.0",
+  "description": "Código da Oficina REST - IFRS Feliz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigozietlow/Oficina-REST.git"
+  },
+  "author": "Rodrigo Zietlow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigozietlow/Oficina-REST/issues"
+  },
+  "homepage": "https://github.com/rodrigozietlow/Oficina-REST#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
