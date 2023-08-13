@@ -1,4 +1,4 @@
-exports.produtos = [
+const produtos = [
   {
     id: 1,
     nome: "Eu, Robô",
@@ -15,3 +15,6 @@ exports.produtos = [
     valor: 12.8,
   },
 ];
+
+exports.listarProdutos = () => produtos;
+exports.buscarProduto = (id) => produtos.find((produto) => produto.id == id);

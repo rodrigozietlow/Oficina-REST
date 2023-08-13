@@ -1,16 +1,13 @@
-const produtos = require("./mocks").produtos;
-
-const listarProdutos = () => produtos;
-const buscarProduto = (id) => produtos.find((produto) => produto.id == id);
+const controllerProdutos = require("./mocks");
 
 module.exports = (server) => {
   // listar produtos
   server.get("/produto", (req, res) => {
-    res.send(listarProdutos());
+    res.send(controllerProdutos.listarProdutos());
   });
 
   // listar o produto
-  server.get("/produto/2", (req, res) => {
-    res.send(buscarProduto(2));
+  server.get("/produto/:idProduto", (req, res) => {
+    res.send(controllerProdutos.buscarProduto(req.params.idProduto));
   });
 };
