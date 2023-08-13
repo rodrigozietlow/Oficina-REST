@@ -18,3 +18,14 @@ const produtos = [
 
 exports.listarProdutos = () => produtos;
 exports.buscarProduto = (id) => produtos.find((produto) => produto.id == id);
+exports.adicionarProduto = (produto) => {
+  if (
+    produto.id ||
+    produtos.find((produtoExistente) => produtoExistente.nome == produto.nome)
+  ) {
+    return false;
+  }
+
+  produtos.push(produto);
+  return true;
+};
