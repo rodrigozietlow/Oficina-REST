@@ -21,4 +21,11 @@ module.exports = (server) => {
     if (retornoPost) res.status(200).send(true);
     else res.status(404).send({ error: "Produto com id ou com nome repetido" });
   });
+
+  server.put("/produto", (req, res) => {
+    let data = req.body;
+    const retornoPost = controllerProdutos.editarProduto(data);
+    if (retornoPost) res.status(200).send(true);
+    else res.status(404).send({ error: "Produto não encontrado" });
+  });
 };

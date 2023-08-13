@@ -29,3 +29,13 @@ exports.adicionarProduto = (produto) => {
   produtos.push(produto);
   return true;
 };
+exports.editarProduto = (produto) => {
+  const index = produtos.findIndex(
+    (produtoExistente) => produtoExistente.id == produto.id
+  );
+  console.log(produto, produtos, index);
+  if (index == -1) return false;
+
+  produtos.splice(index, 1, produto);
+  return true;
+};
